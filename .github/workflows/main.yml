@@ -1,9 +1,33 @@
 name: CI-CD-Pipeline
-on: [push]
+
+on:
+  push:
+    branches: [ "main" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Build Docker Image
-        run: docker build -t my-app .
+      - uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t docker00o0/my-app:latest .
+          docker push docker00o0/my-app:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull and Run on My PC
+        run: |
+          docker pull docker00o0/my-app:latest
+          docker stop my-container || true
+          docker rm my-container || true
+          docker run -d --name my-container -p 8080:80 docker00o0/my-app:latest
