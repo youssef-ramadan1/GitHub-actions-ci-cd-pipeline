@@ -1,14 +1,16 @@
-name: CI-CD-Pipeline
+name: CI/CD Pipeline
 
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -21,13 +23,16 @@ jobs:
           docker build -t docker00o0/my-app:latest .
           docker push docker00o0/my-app:latest
 
-    deploy:
-      needs: build
-      runs-on: self-hosted
-      steps:
-        - name: Pull and Run on My PC
-          shell: powershell
-          run: |
-            docker pull docker00o0/my-app:latest
-            if (docker ps -a -q -f name=my-container) { docker stop my-container; docker rm my-container }
-            docker run -d --name my-container -p 8080:80 docker00o0/my-app:latest
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull and Run on My PC
+        shell: powershell
+        run: |
+          docker pull docker00o0/my-app:latest
+          if (docker ps -a -q -f name=my-container) { 
+              docker stop my-container
+              docker rm my-container 
+          }
+          docker run -d --name my-container -p 8080:80 docker00o0/my-app:latest
