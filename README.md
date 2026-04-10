@@ -29,10 +29,15 @@ This project demonstrates a fully automated CI/CD pipeline designed to container
 * 
 ## 📸 Project Screenshots:
 
-Here are the visual results of the successful CI/CD pipeline and deployment:
-<img width="1919" height="1079" alt="Screenshot 2026-04-10 214057" src="https://github.com/user-attachments/assets/52b1f5f8-b73a-4472-a8f4-3d9385df019f" />
-![fd6edb97-e546-4171-bf73-36908110bfb1](https://github.com/user-attachments/assets/06ef3406-f1b9-4665-a245-c0f8f42f12d7)
-![154c76d3-d1db-4080-83b6-42d111ac0235](https://github.com/user-attachments/assets/ef2e0c23-c240-440d-afaa-59fa33514d67)
-![Uploading Screenshot 2026-04-10 213935.png…]()
-![eae800b8-4f22-45c4-a9a4-a58527ef19e2](https://github.com/user-attachments/assets/e9735a40-5d2a-4d22-aa31-9f32fcbd2fde)
-<img width="1895" height="1045" alt="Screenshot 2026-04-10 213935" src="https://github.com/user-attachments/assets/739aebbf-6d90-4f1c-9382-4116ac9a6a56" />
+![1](https://github.com/user-attachments/assets/0dcdfadb-ca24-4ffc-b35c-813c8b77d0fa)
+
+<img width="1895" height="1045" alt="1" src="https://github.com/user-attachments/assets/445035c8-6589-4bc3-9fdc-4551500b032e" />
+
+![eae800b8-4f22-45c4-a9a4-a58527ef19e2](https://github.com/user-attachments/assets/5c84f7cd-8fbf-4463-8c66-9ca16c5c0fad)
+
+![1 (2)](https://github.com/user-attachments/assets/86fbad83-8b2d-4a07-ba25-0da78b551da0)
+
+
+
+
+
