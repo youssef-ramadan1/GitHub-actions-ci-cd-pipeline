@@ -27,7 +27,8 @@ This project demonstrates a fully automated CI/CD pipeline designed to container
 * *Deployment Control:* Configured a secure local environment for the runner to manage deployments directly.
 
 * 
-## 📸 Project Screenshots
+## 📸 Project Screenshots:
+
 Here are the visual results of the successful CI/CD pipeline and deployment:
 <img width="1919" height="1079" alt="Screenshot 2026-04-10 214057" src="https://github.com/user-attachments/assets/52b1f5f8-b73a-4472-a8f4-3d9385df019f" />
 ![fd6edb97-e546-4171-bf73-36908110bfb1](https://github.com/user-attachments/assets/06ef3406-f1b9-4665-a245-c0f8f42f12d7)
